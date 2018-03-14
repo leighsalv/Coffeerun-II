@@ -41,11 +41,11 @@ will send that data to a Truck instance, using the createOrder method */
   FormHandler.prototype.addInputHandler = function(fn) {
     console.log("Setting input handler for form");
     // Extract email from event target
-    this.$formElement.on("input","[name='emailAddress']", function(event){
+    this.$formElement.on("input", "[name='emailAddress']", function(event) {
       var emailAddress = event.target.value;
       var message = "";
       // Checks if email is valid or invalid
-      if(fn(emailAddress)) {
+      if (fn(emailAddress)) {
         event.target.setCustomValidity("");
       } else {
         message = emailAddress + " is not authorized email address!";

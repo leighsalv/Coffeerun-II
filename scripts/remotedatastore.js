@@ -42,7 +42,7 @@
     //   console.log(serverResponse);
     //   cb(serverResponse);
     // });
-    $.ajax(this.serverUrl + "coffeeorders/" , {
+    $.ajax(this.serverUrl + "coffeeorders/", {
       type: "GET",
       success: function(serverResponse) {
         console.log(serverResponse);

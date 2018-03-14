@@ -19,7 +19,11 @@
   window.myTruck = myTruck; //allows user to interact with Truck
   var checkList = new CheckList(CHECKLIST_SELECTOR);
   checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
+  var Refresh = App.Refresh;
+  var refreshPage = new Refresh(SERVER_URL);
   var formHandler = new FormHandler(FORM_SELECTOR);
+
+  refreshPage.refreshCoffeeRun();
 
   formHandler.addSubmitHandler(function(data) {
     myTruck.createOrder.call(myTruck, data);
